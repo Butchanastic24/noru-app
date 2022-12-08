@@ -1,0 +1,93 @@
+#banner {
+  background-image: url("../images/mountainbiker.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 440px;
+  background-size: 100% 100%;
+}
+#searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#searchBtn {
+  background-color: darkred;
+  color: white;
+}
+
+#trailList {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 40px 100px 40px 100px;
+  gap: 30px;
+}
+
+#trailPreview {
+  display: flex;
+  background-size: 100% 100%;
+  height: 150px;
+  flex-direction: column;
+}
+
+#trailCardInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 5px;
+  border: 1px solid gray;
+  border-top: 0;
+}
+
+#trailCardList {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  padding-left: 10px;
+}
+
+#ratAndLoc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  color: grey;
+  font-size: x-small;
+}
+
+#heartTrail {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#heartSymbol {
+  color: white;
+  font-size: 25px;
+}
+
+#trailDifficulty {
+  display: flex;
+  color: white;
+  width: 100%;
+  margin-top: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+#trailCardDetails {
+  color: grey;
+  font-size: small;
+}
+
+#trailDifficultyShape {
+  width: 20px;
+  height: 20px;
+}
+
+#searchBar {
+  display: flex;
+  gap: 4px;
+}

@@ -1,0 +1,56 @@
+#trailsComponent {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 100px 100px;
+  gap: 30px;
+}
+
+#trailMapDiv {
+  display: flex;
+  gap: 10px;
+}
+
+#trailNameList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#ggMap {
+  width: 950px;
+  height: 600px;
+}
+
+#mapTrailNames {
+  border: solid black 1px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 20px 8px 10px;
+}
+
+#bannerTitle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#trailDistances {
+  display: flex;
+  gap: 5px;
+  color: gray;
+  font-size: small;
+}
+
+#ratAndLoc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  color: grey;
+  font-size: small;
+}
+
+#mapTrailSymbol {
+  height: 20px;
+  width: 20px;
+}

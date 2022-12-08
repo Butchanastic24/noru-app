@@ -1,0 +1,55 @@
+#mainLoginDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 815px;
+}
+
+#loginBox {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  box-shadow: 1px black;
+  padding: 20px 60px 20px 40px;
+  margin: 55px;
+  gap: 35px;
+}
+
+#loginTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+#userInput {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-right: 275px;
+  margin-left: 125px;
+  width: 60%;
+}
+
+#divider {
+  border: none;
+  height: 1px;
+  background-color: lightgray;
+}
+
+#loginBtns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+#loginButton {
+  display: flex;
+  align-items: center;
+  background-color: darkred;
+  color: white;
+  border-radius: 10px;
+  padding: 4px 12px 4px 12px;
+  margin-top: 8px;
+}
+
+#legendComponent {
+}

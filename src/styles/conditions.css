@@ -1,0 +1,88 @@
+#conditionsComponent {
+  display: flex;
+  padding: 80px;
+}
+
+#tableArea {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 65px;
+}
+
+#legendTable {
+  display: flex;
+  margin-left: auto;
+  margin-right: 100px;
+}
+
+#reportsTable {
+  display: flex;
+  flex-direction: column;
+}
+
+#topBanner {
+  display: flex;
+}
+
+#legendComponent {
+  display: flex;
+  background-color: lightgray;
+  padding: 8px 175px 8px 8px;
+}
+
+.bannerCell {
+  background-color: grey;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px black solid;
+  padding: 3px;
+  padding-right: 50px;
+  padding-left: 7px;
+}
+
+.bannerCell1 {
+  background-color: grey;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px black solid;
+  padding: 3px;
+  padding-right: 200px;
+  padding-left: 7px;
+}
+
+.bannerCell2 {
+  background-color: grey;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px black solid;
+  padding: 3px;
+  padding-right: 200px;
+  padding-left: 7px;
+}
+
+.statusIMG {
+  height: 20px;
+  width: 20px;
+  margin: 4px 0px 4px 15px;
+}
+
+.reportRow1 {
+  display: flex;
+  border-bottom: 1px gray solid;
+  gap: 30px;
+  background-color: white;
+}
+.reportRow2 {
+  display: flex;
+  border-bottom: 1px gray solid;
+  gap: 30px;
+  background-color: #f3f3f3;
+}
+
+.conditionListCells {
+  margin-left: 55px;
+}

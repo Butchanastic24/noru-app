@@ -1,0 +1,13 @@
+#savedTrails {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 65px;
+}
+
+#savedTrailList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 340px;
+}

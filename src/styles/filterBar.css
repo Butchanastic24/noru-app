@@ -1,0 +1,45 @@
+#trailFilters {
+  display: flex;
+  position: absolute;
+  margin-right: -80px;
+  background-color: white;
+  width: 950px;
+  height: 30px;
+  border: solid lightgray 1px;
+  padding-left: 5px;
+  align-items: center;
+  gap: 50px;
+}
+
+.filterBox {
+  display: flex;
+  align-items: center;
+}
+
+.filterMenu {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: solid lightgray 1px;
+  border-top: 0px;
+}
+
+#difficultyMenu {
+  margin: 54px 0px 0px -80px;
+}
+
+#distanceMenu {
+  margin: 54px 0px 0px -75px;
+}
+
+#trailTypeMenu {
+  margin: 54px 0px 0px -83px;
+}
+
+#elevationMenu {
+  margin: 54px 0px 0px -79px;
+}
+
+#ratingMenu {
+  margin: 54px 0px 0px -60px;
+}
