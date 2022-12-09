@@ -84,7 +84,7 @@ async function getTrails(req, res) {
     )
     .then((dbRes) => {
       console.log("trails received");
-      res.status(200).send({ trailsInfo: dbRes[0] });
+      res.status(201).send({ trailsInfo: dbRes[0] });
     });
 }
 
@@ -92,21 +92,25 @@ async function getSavedTrails(req, res) {
   let { username } = req.body;
   let user_ID;
 
-  await sequelize
-    .query(`select user_id from users where email='${username}'`)
-    .then((dbRes) => {
-      user_ID = dbRes[0][0].user_id;
-    });
-  await sequelize
-    .query(
-      `
-    select saved_trails.trail_id, trails.name, trails.difficulty, trails.distance, trails.climb, trails.climb, trails.descent, trails.location from saved_trails inner join trails on saved_trails.trail_id=trails.trail_id where saved_trails.user_id=${user_ID};
-    `
-    )
-    .then((dbRes) => {
-      console.log("Saved Trails Sent");
-      res.status(200).send({ trailsInfo: dbRes[0] });
-    });
+  if (username === null) {
+    res.status(200).send("Please Login");
+  } else {
+    await sequelize
+      .query(`select user_id from users where email='${username}'`)
+      .then((dbRes) => {
+        user_ID = dbRes[0][0].user_id;
+      });
+    await sequelize
+      .query(
+        `
+  select saved_trails.trail_id, trails.name, trails.difficulty, trails.distance, trails.climb, trails.climb, trails.descent, trails.location from saved_trails inner join trails on saved_trails.trail_id=trails.trail_id where saved_trails.user_id=${user_ID};
+  `
+      )
+      .then((dbRes) => {
+        console.log("Saved Trails Sent");
+        res.status(200).send({ trailsInfo: dbRes[0] });
+      });
+  }
 }
 
 module.exports = {

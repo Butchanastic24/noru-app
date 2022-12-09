@@ -14,7 +14,7 @@ async function getData() {
         trailsInfo.push(trail);
       });
     })
-    .catch((err) => alert(err.response.request.response));
+    .catch((err) => alert(err.response.request.res));
 }
 
 if (username !== "") {
