@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/home.css";
 import StarRating from "./StarRating";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import blueSymbol from "../images/blueDiff.png";
 import greenSymbol from "../images/greenDif.png";
 import blackSymbol from "../images/blackDif.png";
@@ -16,6 +16,7 @@ import rose from "../images/rose.png";
 
 function RecTrails({ props }) {
   const [trailImage, setTrailImage] = useState("");
+  const [isClicked, setIsClicked] = useState(false);
 
   function getTrailImage(name) {
     switch (name) {
@@ -43,13 +44,15 @@ function RecTrails({ props }) {
   async function favoriteTrail() {
     let username = sessionStorage.getItem("username");
     let id = props.trail_id;
-    if (username !== "") {
+    if (username.length > 1) {
       await axios
         .post("/savetrail", { username, id })
         .then((res) => {
           alert(res.data);
         })
         .catch((err) => alert(err.response.request.response));
+
+      setIsClicked(true);
     } else {
       alert("Please Login to save trails");
     }
@@ -102,7 +105,11 @@ function RecTrails({ props }) {
         }}
       >
         <div id="heartTrail" onClick={favoriteTrail}>
-          <AiOutlineHeart id="heartSymbol" />
+          {isClicked ? (
+            <AiFillHeart className="heartSymbol" />
+          ) : (
+            <AiOutlineHeart className="heartSymbol" />
+          )}
         </div>
         <div
           id="trailDifficulty"

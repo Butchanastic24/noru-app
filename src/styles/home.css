@@ -62,7 +62,7 @@
   justify-content: flex-end;
 }
 
-#heartSymbol {
+.heartSymbol {
   color: white;
   font-size: 25px;
 }

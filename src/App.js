@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./routes/Home";
 import Trails from "./routes/Trails";
@@ -25,6 +25,8 @@ async function getData() {
 getData();
 
 function App() {
+  const [infoArray, setInfoArray] = useState(trailsInfo);
+
   const routesClasses = "textLinks grow";
   return (
     <div id="app">
@@ -51,10 +53,10 @@ function App() {
       </nav>
       <div>
         <Routes>
-          <Route path="/" element={<Home trailsInfo={trailsInfo} />} />
-          <Route path="trails" element={<Trails trailsInfo={trailsInfo} />} />
+          <Route path="/" element={<Home trailsInfo={infoArray} />} />
+          <Route path="trails" element={<Trails trailsInfo={infoArray} />} />
           <Route path="conditions" element={<Conditions />} />
-          <Route path="myRides" element={<MyRides trailsInfo={trailsInfo} />} />
+          <Route path="myRides" element={<MyRides trailsInfo={infoArray} />} />
           <Route path="login" element={<Login />} />
         </Routes>
       </div>

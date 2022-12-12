@@ -40,7 +40,7 @@ function MyRides() {
       <div id="savedTrails">
         <h2>Your Saved Rides</h2>
         <div id="savedTrailList">
-          {trailsInfo.map((trail) => (
+          {trailArray.map((trail) => (
             <MapTrails key={trail.trail_id} props={trail} />
           ))}
         </div>
