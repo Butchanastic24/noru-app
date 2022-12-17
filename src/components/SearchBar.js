@@ -4,7 +4,10 @@ import "../styles/searchBar.css";
 function SearchBar() {
   return (
     <div className="searchBarComponent">
-      <input type="text" placeholder="Trails" />
+      <div id="searchBar">
+        <input type="text" placeholder="Trails" />
+        <button id="searchBtn">Search</button>
+      </div>
     </div>
   );
 }

@@ -14,10 +14,7 @@ function Home({ trailsInfo }) {
   return (
     <div className="homeComponent">
       <div id="banner">
-        <div id="searchBar">
-          <SearchBar />
-          <button id="searchBtn">Search</button>
-        </div>
+        <SearchBar />
       </div>
       <div id="trailList">
         <h2 id="recTrailTitle">Top Rated Trails</h2>

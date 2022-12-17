@@ -1,0 +1,8 @@
+#searchBarComponent {
+  display: flex;
+  flex-direction: column;
+}
+
+#searchData {
+  background-color: white;
+}
